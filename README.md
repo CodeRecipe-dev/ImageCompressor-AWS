@@ -4,7 +4,7 @@ More details at: https://coderecipe.ai/architectures/47740119
 
 **Problem Statement**
 
-I’m working on an on a very image-heavy website where users upload lots of their own content. As any web-developer knows: large, slow loading images can be the easiest way to make your website look slow and destroy the UX, no matter which lightning-fast front-end framework or cloud content delivery network you have.
+Iâ€™m working on an on a very image-heavy website where users upload lots of their own content. As any web-developer knows: large, slow loading images can be the easiest way to make your website look slow and destroy the UX, no matter which lightning-fast front-end framework or cloud content delivery network you have.
   
 
 **Solution**
