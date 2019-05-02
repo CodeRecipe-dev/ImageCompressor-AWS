@@ -43,3 +43,9 @@ resources:
 plugins:
   - serverless-pseudo-parameters
   - serverless-iam-roles-per-function
+  - serverless-plugin-scripts
+
+custom:
+  scripts:
+    hooks:
+      'package:cleanup': 'docker pull amazonlinux; docker run --rm -v $PWD:/data -w /data node:8.10 npm install scrypt web3 ethereumjs-tx'

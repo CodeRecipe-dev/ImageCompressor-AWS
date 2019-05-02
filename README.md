@@ -13,13 +13,22 @@ I decided to use **AWS Lambda** to automate the process of compressing the image
 
 
 ## Prerequisites
-npm install serverless-pseudo-parameters
-npm install serverless-iam-roles-per-function
+```console
+npm install serverless
 
+export AWS_ACCESS_KEY_ID=<your-key-here>
 
-Note:
-If deploying from a non linux machine (osx, etc), npm install with docker so that the native extensions required are installed properly: `docker run --rm -v $PWD:/data -w /data node:8.10 npm install imagemin imagemin-mozjpeg`
-
+export AWS_SECRET_ACCESS_KEY=<your-secret-key-here>
+```
 
 ## Deploy
-`serverless deploy --stage <stage-name> --COMPRESSED_BUCKET_NAME <name-of-the-bucket-that-stores-compressed-images> --UNCOMPRESSED_BUCKET_NAME <name-of-the-bucket-that-stores-uncompressed-images>`
+```console
+serverless create --template-url https://github.com/CodeRecipe-dev/ImageCompressor-AWS --path image-compression
+
+cd image-compression
+
+npm install
+
+serverless deploy --stage sample --COMPRESSED_BUCKET_NAME coderecipe-images-compressed --UNCOMPRESSED_BUCKET_NAME coderecipe-images-uncompressed
+
+```
